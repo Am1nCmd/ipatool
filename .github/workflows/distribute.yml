@@ -50,7 +50,7 @@ jobs:
     needs: [get_version, build]
     steps:
       - name: Download binary
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: ipatool-v${{ needs.get_version.outputs.version }}
           path: ipatool-v${{ needs.get_version.outputs.version }}
